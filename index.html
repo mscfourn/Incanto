@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+	<head>
+
+		<title>Venise et le système de l'Incanto - DHLAB</title>
+
+		<meta name="author" content="">
+		<meta name="keywords" content="">
+		<meta name="description" content="">
+
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+
+		<link type="image/ico" rel="shortcut icon" href="//resources.esri.com/favicon.ico">
+		<link type="image/ico" rel="icon"  href="//resources.esri.com/favicon.ico">
+
+		<link rel="stylesheet" type="text/css" href="lib/normalize.css">
+
+		<link rel="stylesheet" type="text/css" href="//serverapi.arcgisonline.com/jsapi/arcgis/3.5/js/dojo/dijit/themes/tundra/tundra.css">
+		<link rel="stylesheet" type="text/css" href="//serverapi.arcgisonline.com/jsapi/arcgis/3.5/js/esri/css/esri.css" />
+
+		<link rel="stylesheet" href="lib/font-awesome/css/font-awesome.min.css">
+		<!--[if IE 7]>
+		<link rel="stylesheet" href="lib/font-awesome/font-awesome-ie7.min.css">
+		<![endif]-->
+		
+		<link rel="stylesheet" type="text/css" href="app/ui/Header.css">
+		<link rel="stylesheet" type="text/css" href="app/utils/Helper.css">
+		<link rel="stylesheet" type="text/css" href="app/series/core/Core.css">
+		
+		<script type="text/javascript">
+			var dojoConfig = {
+				parseOnLoad: true,
+				isDebug: false,
+				packages: [
+				{
+					name: 'storymaps',
+					location: location.pathname.replace(/\/[^/]+$/, '/') + 'app'
+				}
+				]
+			};
+		</script>
+
+		<!--Social Media Links-->
+		<script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>
+		<script type="text/javascript">
+			stLight.options({publisher: "77225c91-2742-42f7-b1b4-bddda99a9bde"});
+		</script>
+		<!--END Social Media Links-->
+
+	</head>
+	<body class="tundra">
+
+		<div id="application-window">
+
+			
+			<div id="header" class="region-top left no-repeat">
+			
+				<div id="logo">
+					<img id="logoImg" src="resources/images/app/DHLAB.png">
+				</div><!--/logo-->
+					
+				<div id="header-text" class="region-center">
+					<h1 id="title"></h1>
+					<h2 id="subtitle"></h2>
+					<p id="hide-intro" class="intro-toggle">H I D E</p>
+					
+				</div><!--/header-text-->
+
+				<i id="accordion-toggle" class="icon-list-ol"></i>
+				<div id="mobile-header"></div>
+					
+				<div id="mobile-nav">
+					<span class="left-nav intro-toggle">INTRO</span>
+					<span class="map-toggle">MAP</span>
+					<span class="right-nav legend-toggle">LEGENDE</span>
+				</div><!--/mobile-nav-->
+
+				<div id="branding-wrapper" class="region-right">
+					<div id="social">
+						<a id="smLink" href="http://storymaps.esri.com"</a>
+						<span class='st_facebook'></span>
+						<span class='st_twitter' st_via='EsriStoryMaps'></span>
+						<span class='st_sharethis'></span>
+					</div><!--/social-->
+					<div id="logo">
+						<a id="logoLink" href="http://www.esri.com" target="_blank">
+							<img id="logoImg" src="resources/images/app/esriGlobeLogow.png" alt="Esri - Home">
+						</a><!--/logoLink-->
+					</div><!--/logo-->
+				</div><!--/branding-wrapper-->
+
+			</div><!--/banner-->
+
+			<div id="content" class="region-center">
+
+				<div id="side-pane" class="region-left">
+				</div><!--/side-panel-->
+
+				<div id="map-pane" class="region-center">
+					
+					<img class="loader loader80" src="resources/images/app/loader.gif" alt="Loading">
+            
+					<div id="legend-wrapper">
+						<div id="close-mobile-legend" class="mobile-close legend-toggle"><i class="icon-remove"></i></div>
+						<div id="legend-toggle" class="legend-toggle">LEGENDE</div>
+						<div id="legend-pane">
+						</div><!--/legend-pane-->
+					</div>
+
+					<div id="mobile-popup">
+						<div id="close-mobile-popup" class="mobile-close mobile-popup-toggle"><i class="icon-remove"></i></div>
+					</div><!--/mobile-popup-->
+
+				</div><!--/map-pane-->
+
+			</div><!--/content-->
+
+		</div><!--application-window-->
+
+		<script type="text/javascript" src="//serverapi.arcgisonline.com/jsapi/arcgis/3.5"></script>
+		<script type="text/javascript" src="lib/jquery-1.9.1.min.js"></script>
+		<script type="text/javascript">
+
+			//GET Application Config
+			require(["storymaps/series/Config"]);
+
+			require(["storymaps/series/core/Core"], function(core){
+				core.init();
+			});
+
+		</script>
+
+
+	</body>
+</html>
