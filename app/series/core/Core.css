@@ -1,0 +1,181 @@
+#accordion-toggle{
+	display: none;
+	position: absolute;
+	color: #FFFFFF;
+	font-size: 28px;
+	margin-top: 9px;
+	left: 9px;
+	cursor: pointer;
+}
+
+#side-pane{
+	background-color: #FFFFFF;
+
+	height: 100%;
+	width: 30%;
+	overflow: auto;
+}
+
+.accordion-header, .accordion-content{
+	position: relative;
+	padding: 15px 25px;
+}
+
+.accordion-header{
+	border-top: 1px solid #B40404;
+}
+
+.accordion-header:first-child{
+	border:none;
+}
+
+.accordion-header:hover{
+	background-color: #B40404;
+	cursor: pointer;
+}
+
+.accordion-header.active:hover{
+	background-color: #B40404;
+	cursor: default;
+}
+
+.accordion-header-arrow{
+	position: absolute;
+	top: 30px;
+	left: 0;
+	width: 0;
+	height: 0;
+	border-top: 20px solid transparent;
+	border-bottom: 20px solid transparent;
+	border-left: 20px solid #000000;
+}
+
+.accordion-header-number, .accordion-header-title{
+	vertical-align: middle;
+}
+
+.accordion-header-number{
+	padding: 0 10px;
+	color: #000000;
+	font-size: 72px;
+	font-family: Georgia;
+}
+
+.accordion-header-title{
+	font-size: 16px;
+	font-weight: bold;
+}
+
+.accordion-content{
+	display: none;
+	font-size: 14px;
+	font-family: Georgia;
+	line-height: 1.4em;
+	overflow: auto;
+}
+
+.map{
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	top: 0;
+	z-index: 0
+}
+
+.map.active{
+	z-index: 1;
+}
+
+.simpleGeocoder{
+	position: absolute;
+	top: 20px;
+	left: 71px;
+	z-index: 30;
+}
+
+b{
+	font-weight: bold;
+}
+
+/* Custom Webkit Scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+}
+
+::-webkit-scrollbar-thumb {
+    background: #B40404;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5);
+}
+
+@media all and (min-width: 781px) {
+	#accordion-toggle{
+		display: none;
+		cursor: pointer;
+	}
+
+	#map-toggle{
+		cursor: pointer;
+	}
+}
+
+@media all and (max-width: 780px) {
+	#side-pane{
+		display: none;
+		position: absolute;
+		top: 0;
+		height: 100%;
+		width: 100%;
+		z-index: 10;
+	}
+
+	#accordion-toggle{
+		display: block;
+	}
+
+	.accordion-header, .accordion-content{
+		padding: 10px 25px;
+	}
+
+	.accordion-header-arrow{
+		top: 20px;
+	}
+
+	.accordion-header-number{
+		font-size: 50px;
+	}
+
+	.accordion-header-title{
+		font-size: 15px;
+	}
+
+	#map-pane{
+		position: absolute;
+	}
+
+	.esriPopup{
+		display: none;
+	}
+
+	.contentPane{
+		padding: 15px;
+		max-height: 150px;
+		overflow: auto;
+	}
+}
+
+
+.esriTimeSlider {width:100%; z-index:999; position:relative;}
+.esriTimeSlider .tsButton {width:16px; height:16px;background-repeat:no-repeat;}
+.esriTimeSlider .tsPlayButton {background-position : -32px -0px;}
+.esriTimeSlider .tsPauseButton {background-position : -16px -0px;}
+.esriTimeSlider .tsPrevButton {background-position : -48px -0px;}
+.esriTimeSlider .tsNextButton {background-position : 0px 0px;}
+.esriTimeSlider .ts {padding:10px 3px 3px 3px; margin:3px;}
+.esriTimeSlider .tsTicks {height:10px;margin-bottom:-5px;}
+.esriTimeSlider .tsLabels {font-size:.7em;margin-top:5px;text-shadow:0 0 0 1px rgba(255,255,255,0.7);}
+
+.dijitSliderImageHandle:focus { outline:none; }
